@@ -226,6 +226,50 @@ const GALLERY_MANIFEST = {
     "10-harvest-british-college/screenshots/pages/13-customer-portal-register.png",
     "10-harvest-british-college/screenshots/pages/14-instructor-portal-login.png",
     "10-harvest-british-college/screenshots/pages/15-local-admin-login.png"
+  ],
+  "11-rns-hr": [
+    "11-rns-hr/screenshots/01-login.png",
+    "11-rns-hr/screenshots/02-dashboard.png",
+    "11-rns-hr/screenshots/03-hr-dashboard.png",
+    "11-rns-hr/screenshots/04-analytics.png",
+    "11-rns-hr/screenshots/05-employees.png",
+    "11-rns-hr/screenshots/06-attendance.png",
+    "11-rns-hr/screenshots/07-attendance-report.png",
+    "11-rns-hr/screenshots/08-attendance-calendar.png",
+    "11-rns-hr/screenshots/09-leave-requests.png",
+    "11-rns-hr/screenshots/10-payroll.png",
+    "11-rns-hr/screenshots/11-violation-logs.png",
+    "11-rns-hr/screenshots/12-overtime-logs.png",
+    "11-rns-hr/screenshots/13-deduction-rules.png",
+    "11-rns-hr/screenshots/14-overtime-rules.png",
+    "11-rns-hr/screenshots/15-branches.png",
+    "11-rns-hr/screenshots/16-devices.png",
+    "11-rns-hr/screenshots/17-shifts.png",
+    "11-rns-hr/screenshots/18-departments.png",
+    "11-rns-hr/screenshots/19-roles.png",
+    "11-rns-hr/screenshots/20-hr-settings-hub.png",
+    "11-rns-hr/screenshots/21-data-import.png",
+    "11-rns-hr/screenshots/pages/01-login.png",
+    "11-rns-hr/screenshots/pages/02-dashboard.png",
+    "11-rns-hr/screenshots/pages/03-hr-dashboard.png",
+    "11-rns-hr/screenshots/pages/04-analytics.png",
+    "11-rns-hr/screenshots/pages/05-employees.png",
+    "11-rns-hr/screenshots/pages/06-attendance.png",
+    "11-rns-hr/screenshots/pages/07-attendance-report.png",
+    "11-rns-hr/screenshots/pages/08-attendance-calendar.png",
+    "11-rns-hr/screenshots/pages/09-leave-requests.png",
+    "11-rns-hr/screenshots/pages/10-payroll.png",
+    "11-rns-hr/screenshots/pages/11-violation-logs.png",
+    "11-rns-hr/screenshots/pages/12-overtime-logs.png",
+    "11-rns-hr/screenshots/pages/13-deduction-rules.png",
+    "11-rns-hr/screenshots/pages/14-overtime-rules.png",
+    "11-rns-hr/screenshots/pages/15-branches.png",
+    "11-rns-hr/screenshots/pages/16-devices.png",
+    "11-rns-hr/screenshots/pages/17-shifts.png",
+    "11-rns-hr/screenshots/pages/18-departments.png",
+    "11-rns-hr/screenshots/pages/19-roles.png",
+    "11-rns-hr/screenshots/pages/20-hr-settings-hub.png",
+    "11-rns-hr/screenshots/pages/21-data-import.png"
   ]
 };
 const GALLERY_COUNTS = {
@@ -238,5 +282,6 @@ const GALLERY_COUNTS = {
   "07-estshary-patient-site": 0,
   "08-hr-system": 34,
   "09-trc-referrals": 3,
-  "10-harvest-british-college": 28
+  "10-harvest-british-college": 28,
+  "11-rns-hr": 42
 };

@@ -150,6 +150,26 @@ const PROJECTS = [
     api: 'docs/api/harvest-british-college.md',
     repo: 'https://github.com/Abdelrahman1203/harvest-british-college',
   },
+  {
+    id: '11-rns-hr',
+    name: 'RNS HR',
+    tag: 'Enterprise HR / SaaS',
+    summary: 'Multi-tenant HRMS for RNS Cinemas — biometric attendance, payroll rule engine, 22 HR modules, bilingual React admin — live at hr-app.rnscinemas.com.',
+    stack: ['Laravel 12', 'React 19', 'MongoDB', 'ZKTeco', 'Multi-Tenant'],
+    thumb: '11-rns-hr/screenshots/05-employees.png',
+    readme: 'github-readmes/rns-hr/README.md',
+    caseStudy: 'case-studies/rns-hr.md',
+    arch: 'docs/architecture/rns-hr.md',
+    api: 'docs/api/rns-hr.md',
+    repo: 'https://github.com/Abdelrahman1203/rns-hr',
+    meta: {
+      industry: 'HR / Cinema Operations',
+      role: 'Full-Stack Engineer',
+      duration: '2024 – Present',
+      live: 'hr-app.rnscinemas.com',
+      platforms: 'Web Admin, ZKTeco Bridge, Integration API',
+    },
+  },
 ];
 
 function renderProjectMeta(p) {
@@ -220,6 +240,13 @@ const CASE_STUDIES = [
     summary: 'Unified CRM, class operations, payments, and multi-portal access for admin, instructors, and students.',
     link: 'case-studies/harvest-british-college.md',
     projectId: '10-harvest-british-college',
+  },
+  {
+    title: 'RNS HR — Multi-Tenant HR Platform',
+    impact: '22 modules · ZKTeco · Live at hr-app.rnscinemas.com',
+    summary: 'Production HRMS for RNS Cinemas with attendance rule engine, payroll, multi-tenant MongoDB, and bilingual React admin.',
+    link: 'case-studies/rns-hr.md',
+    projectId: '11-rns-hr',
   },
   {
     title: 'BoatBnB + ERP — Multi-Platform Boat Rental Marketplace',

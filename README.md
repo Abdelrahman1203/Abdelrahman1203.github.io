@@ -41,6 +41,7 @@ npx --yes serve . -l 3000
 | 08 | [08-hr-system/](./08-hr-system/) | HR System | Laravel 12, React 19, MongoDB |
 | 09 | [09-trc-referrals/](./09-trc-referrals/) | TRC Referrals | Laravel, MySQL, Sanctum |
 | 10 | [10-harvest-british-college/](./10-harvest-british-college/) | Harvest British College (SYS) | Laravel, Livewire, Modules, Twilio |
+| 11 | [11-rns-hr/](./11-rns-hr/) | RNS HR (RNS Cinemas) | Laravel 12, React 19, MongoDB, ZKTeco |
 
 ## Publishing to GitHub
 
