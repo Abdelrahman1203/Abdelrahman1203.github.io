@@ -1,45 +1,59 @@
-# Case Study: BoatBnB + ERP Monorepo
+# Case Study: BoatBnB — Full Boat Booking Platform
 
 ## Client Context
 
-A product company needed to merge two products — a warehouse ERP and a boat rental marketplace — into a single Laravel 12 codebase for shared infrastructure.
+A marina-tech startup needed a **complete boat rental ecosystem** — not just a listing site — covering guests who book trips, individual boat owners, marina agencies managing fleets, on-water service providers, and internal admin operations across multiple countries and languages.
 
 ## Problem
 
-- Two separate codebases with duplicated auth, mail, and queue infrastructure
-- Boat rental needed Stripe payments, OAuth login, and S3 file storage
-- ERP needed MongoDB for flexible inventory and Vue 3 admin SPA
-- Different databases (MongoDB vs MySQL) in one deployable unit
+- Fragmented booking flows: guests, hosts, and service providers had no shared platform
+- No GPS-aware discovery for boats anchored or moored at different marinas
+- Payments, payouts, and refunds required manual reconciliation
+- Support and coordination between guests and hosts relied on phone calls, not in-app chat
+- Product needed to launch in **10 languages** for Gulf and international markets
 
 ## Solution
 
-Architected a **Laravel 12 monorepo** with:
+Designed and built **BoatBnB** — a Laravel 12 backend powering **five role-based experiences**:
 
-- Shared Laravel kernel (auth, queue, mail, Sanctum)
-- **ERP module** — Vue 3 + Pinia + MongoDB (see ERP Arabia)
-- **BoatBnB module** — Vue 3 admin + MySQL + Stripe + AWS S3
-- Socialite OAuth (Google/Apple) for boat rental users
-- Separate database connections per product domain
+| Role | Capabilities |
+|------|--------------|
+| Guest / client | Search, book, pay (Stripe), chat, reviews, wishlist, referrals |
+| Host | List boats, set availability, accept bookings, manage media |
+| Service provider | Publish add-on services (captain, catering, events) |
+| Agency | Fleet management, boat transfers between agencies |
+| Admin | Moderation, analytics, insurance, user/boat approval |
+
+### Core modules
+
+- **GPS boat discovery** — latitude/longitude on every listing, nearby search with radius filters, featured and category browse
+- **Booking engine** — rental types (bareboat, with captain, with owner), promo codes, loyalty tiers, insurance add-ons
+- **Stripe payments** — payment methods, refunds, invoices, host/agency payouts
+- **Chat** — REST messaging with attachments + **Agora** for realtime voice/video between parties
+- **Operations** — push notifications, support tickets, saved searches, marine weather by boat location
+- **Vue 3 admin** — dashboards for boats, bookings, users, and analytics
 
 ## Business Impact
 
 | Metric | Result |
 |--------|--------|
-| Codebase maintenance | 2 repos → 1 monorepo with shared infra |
-| Auth/mail/queue | Duplicated → centralized Laravel services |
-| Payment processing | Manual → Stripe integration |
-| File storage | Local → AWS S3 for boat listing photos |
-| Deployment | Separate deploys → single Docker pipeline |
+| User roles supported | 5 distinct apps (guest, host, provider, agency, admin) |
+| Languages | 10-language mobile + admin UI |
+| Discovery | GPS nearby search replaces manual marina browsing |
+| Payments | End-to-end Stripe — booking, refund, payout |
+| Communication | In-app chat + Agora replaces off-platform phone coordination |
+| Media | AWS S3 pipeline for boat photos, videos, and documents |
 
 ## Technologies
 
-Laravel 12 · Vue 3 · MongoDB · MySQL · Stripe · AWS S3 · Socialite · Redis
+Laravel 12 · Vue 3 · Stripe · Agora · AWS S3 · Sanctum · Firebase · Socialite · Redis · MySQL
 
 ## Screenshots
 
 View the full gallery: [BoatBnB mobile + admin screenshots](../website/project.html?id=04-boatbnb-erp-monorepo)
 
-Mobile screens: splash, home search, yacht/boat listings, jet ski, services, rental type picker, boat detail, user profile, bookings.
+Mobile: splash, home search, yacht/boat listings, jet ski, services marketplace, rental type picker, boat detail, user profile, bookings.  
+Admin: login, dashboard, boats, bookings, users, analytics.
 
 ---
 

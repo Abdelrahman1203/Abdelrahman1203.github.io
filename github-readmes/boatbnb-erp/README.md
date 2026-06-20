@@ -1,17 +1,36 @@
-# BoatBnB + ERP Arabia Monorepo
+# BoatBnB — Full Boat Booking Platform
 
-Laravel 12 monorepo combining warehouse ERP (Vue 3 + MongoDB) and boat rental marketplace (Stripe, OAuth, AWS S3).
+Multi-role boat rental marketplace: mobile apps for **guests, hosts, service providers, and agencies**, plus a Vue 3 admin panel — Laravel 12 backend with Stripe, GPS discovery, Agora chat, and 10-language support.
 
 ## Tech Stack
 
-- Laravel 12, Sanctum, Socialite (Google/Apple)
-- ERP: Vue 3, Pinia, MongoDB, Redis
-- BoatBnB: Vue 3, Vuex, MySQL, Stripe, AWS S3
+- **Backend:** Laravel 12, Sanctum, Socialite (Google/Apple), Firebase auth
+- **Admin:** Vue 3, Vuex, vue-i18next
+- **Payments:** Stripe (bookings, refunds, payouts)
+- **Chat:** Agora (realtime) + REST messaging API
+- **Location:** GPS coordinates, nearby/radius search, marine weather
+- **Storage:** AWS S3
+
+## User Roles
+
+| Role | Description |
+|------|-------------|
+| Guest / client | Book boats and services, pay, chat, review |
+| Host | List and manage own boats and bookings |
+| Service provider | Offer captain, catering, events, and add-ons |
+| Agency | Manage fleets and inter-agency boat transfers |
+| Admin | Platform moderation, analytics, insurance |
 
 ## Features
 
-**ERP Arabia:** Purchases, transfers, adjustments, 10+ reports  
-**BoatBnB:** Boat search/bookings, Stripe payments, host APIs, referrals, chat
+- GPS boat discovery (search, nearby, featured, categories)
+- Booking flow with rental types, promo codes, loyalty
+- Service provider marketplace attached to boats
+- Stripe payment methods, refunds, invoices, payouts
+- Enhanced chat (messages, attachments, unread counts) + Agora voice/video
+- 10-language UI (mobile + admin)
+- Referrals, support tickets, insurance, push notifications
+- OAuth + OTP + WhatsApp verification
 
 ![Mobile Home Search](../../04-boatbnb-erp-monorepo/screenshots/11-mobile-home-search.png)
 
@@ -19,7 +38,7 @@ Laravel 12 monorepo combining warehouse ERP (Vue 3 + MongoDB) and boat rental ma
 
 | Screen | Description |
 |--------|-------------|
-| Splash & Open | App launch with English toggle |
+| Splash & Open | App launch with language toggle |
 | Home Search | Categories: yacht, jet ski, services |
 | Yacht & Boats | Listings with captain/bareboat options |
 | Jet Ski | Hourly sea rentals |
@@ -39,6 +58,8 @@ cp .env.example .env
 composer install && npm install
 php artisan migrate
 php artisan serve --port=8208
+# Admin SPA (separate terminal)
+cd boatbnb-admin && npm install && npm run dev
 ```
 
 ## Documentation
@@ -46,10 +67,6 @@ php artisan serve --port=8208
 - [Architecture](../../docs/architecture/boatbnb-erp.md)
 - [API Reference](../../docs/api/boatbnb-erp.md)
 - [Case Study](../../case-studies/boatbnb-erp.md)
-
-## Note
-
-ERP UI primarily in standalone `vue-app/` repo — see [erp-arabia](../erp-arabia/README.md).
 
 ## Author
 

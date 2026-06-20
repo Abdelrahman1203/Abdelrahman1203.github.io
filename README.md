@@ -34,7 +34,7 @@ npx --yes serve . -l 3000
 | 01 | [01-blackhorse/](./01-blackhorse/) | BlackHorse B2B Delivery | Node.js, MongoDB, Socket.IO, Flutter |
 | 02 | [02-real-estate-all-stars/](./02-real-estate-all-stars/) | Real Estate All-Stars | Laravel, MySQL, Fawaterak |
 | 03 | [03-erp-arabia/](./03-erp-arabia/) | ERP Arabia | Laravel, Vue 3, MongoDB |
-| 04 | [04-boatbnb-erp-monorepo/](./04-boatbnb-erp-monorepo/) | BoatBnB + ERP | Laravel 12, Stripe, Vue 3 |
+| 04 | [04-boatbnb-erp-monorepo/](./04-boatbnb-erp-monorepo/) | BoatBnB | Laravel 12, Stripe, Agora, Vue 3 |
 | 05 | [05-easternco-law-erp/](./05-easternco-law-erp/) | Eastern & Co Law ERP | Laravel Modules, MySQL |
 | 06 | [06-estshary-admin/](./06-estshary-admin/) | Estshary Admin | Laravel, JWT, OpenAI |
 | 07 | [07-estshary-patient-site/](./07-estshary-patient-site/) | Estshary Patient Site | Laravel, Blade |
