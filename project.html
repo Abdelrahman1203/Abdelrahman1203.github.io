@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project Gallery — Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav container">
+      <a class="logo" href="index.html">AW<span>.</span></a>
+      <ul class="nav-links">
+        <li><a href="index.html#projects">← All Projects</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="section">
+    <div class="container">
+      <div id="project-header" class="section-head"></div>
+      <div class="gallery-tabs" id="gallery-tabs"></div>
+      <div class="gallery-grid" id="gallery-grid"></div>
+      <div class="project-doc-links" id="doc-links"></div>
+    </div>
+  </main>
+
+  <div class="lightbox" id="lightbox" hidden>
+    <button class="lightbox-close" aria-label="Close">×</button>
+    <button class="lightbox-prev" aria-label="Previous">‹</button>
+    <img id="lightbox-img" alt="">
+    <button class="lightbox-next" aria-label="Next">›</button>
+    <p id="lightbox-caption"></p>
+  </div>
+
+  <script src="js/projects.js"></script>
+  <script src="js/gallery-manifest.js"></script>
+  <script src="js/project-gallery.js"></script>
+</body>
+</html>

@@ -1,0 +1,8 @@
+# See live site: https://abdelrahman1203.github.io
+
+node_modules/
+capture*.mjs
+capture-log*.json
+setup-*.sql
+package-lock.json
+.DS_Store
