@@ -4,19 +4,13 @@ document.addEventListener('DOMContentLoaded', () => {
   setupNav();
 });
 
-const PORTFOLIO_URL = 'https://abdelrahman1203.github.io/';
-const PORTFOLIO_SOURCE = 'https://github.com/Abdelrahman1203/Abdelrahman1203.github.io';
-
 function docUrl(path) {
   return `doc.html?path=${encodeURIComponent(path)}`;
 }
 
-function renderProjects() {
-  const grid = document.getElementById('project-grid');
-  if (!grid || typeof PROJECTS === 'undefined') return;
-
-  grid.innerHTML = PROJECTS.map((p) => `
-    <article class="project-card">
+function projectCardHtml(p, compact = false) {
+  return `
+    <article class="project-card${compact ? ' project-card-compact' : ''}">
       <div class="project-thumb">
         <img src="${p.thumb}" alt="${p.name} screenshot" loading="lazy"
           onerror="this.parentElement.innerHTML='<div class=\\'placeholder\\'>${p.name.charAt(0)}</div>'">
@@ -24,6 +18,7 @@ function renderProjects() {
       <div class="project-body">
         <span class="project-tag">${p.tag}</span>
         <h3>${p.name}</h3>
+        ${p.impact ? `<p class="project-impact">${p.impact}</p>` : ''}
         <p>${p.summary}</p>
         ${renderProjectMeta(p)}
         <div class="project-stack">${p.stack.map((s) => `<span>${s}</span>`).join('')}</div>
@@ -32,19 +27,46 @@ function renderProjects() {
           <a href="${docUrl(p.readme)}">README</a>
           <a href="${docUrl(p.caseStudy)}">Case Study</a>
           <a href="${docUrl(p.arch)}">Architecture</a>
-          <a href="${docUrl(p.api)}">API Docs</a>
-          ${p.repo ? `<a href="${p.repo}" target="_blank" rel="noopener">GitHub Repo</a>` : ''}
+          ${p.repo ? `<a href="${p.repo}" target="_blank" rel="noopener">GitHub</a>` : ''}
         </div>
       </div>
     </article>
-  `).join('');
+  `;
+}
+
+function renderProjects() {
+  if (typeof PROJECTS === 'undefined') return;
+
+  const featuredIds = typeof FEATURED_PROJECT_IDS !== 'undefined'
+    ? FEATURED_PROJECT_IDS
+    : PROJECTS.map((p) => p.id);
+
+  const featured = featuredIds
+    .map((id) => PROJECTS.find((p) => p.id === id))
+    .filter(Boolean);
+  const other = PROJECTS.filter((p) => !featuredIds.includes(p.id));
+
+  const featuredGrid = document.getElementById('project-grid');
+  const otherGrid = document.getElementById('other-project-grid');
+
+  if (featuredGrid) {
+    featuredGrid.innerHTML = featured.map((p) => projectCardHtml(p)).join('');
+  }
+  if (otherGrid) {
+    otherGrid.innerHTML = other.map((p) => projectCardHtml(p, true)).join('');
+  }
 }
 
 function renderCaseStudies() {
   const grid = document.getElementById('case-grid');
   if (!grid || typeof CASE_STUDIES === 'undefined') return;
 
-  grid.innerHTML = CASE_STUDIES.map((c) => `
+  const featuredIds = typeof FEATURED_PROJECT_IDS !== 'undefined' ? FEATURED_PROJECT_IDS : [];
+  const studies = featuredIds.length
+    ? CASE_STUDIES.filter((c) => featuredIds.includes(c.projectId))
+    : CASE_STUDIES;
+
+  grid.innerHTML = studies.map((c) => `
     <article class="case-card">
       <h3>${c.title}</h3>
       <p class="impact">${c.impact}</p>

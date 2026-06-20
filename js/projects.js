@@ -1,9 +1,19 @@
+const FEATURED_PROJECT_IDS = [
+  '04-boatbnb-erp-monorepo',
+  '11-rns-hr',
+  '10-harvest-british-college',
+  '01-blackhorse',
+  '03-erp-arabia',
+  '06-estshary-admin',
+];
+
 const PROJECTS = [
   {
     id: '01-blackhorse',
     name: 'BlackHorse',
     tag: 'B2B Platform',
     summary: 'Wholesale delivery platform for supermarkets, suppliers, and drivers with real-time orders and group purchasing.',
+    impact: '240+ API endpoints · 5 user roles · Real-time Socket.IO order tracking',
     stack: ['Node.js', 'MongoDB', 'Socket.IO', 'Flutter'],
     thumb: '01-blackhorse/screenshots/01-admin-login.png',
     readme: 'github-readmes/blackhorse/README.md',
@@ -30,6 +40,7 @@ const PROJECTS = [
     name: 'ERP Arabia',
     tag: 'Warehouse ERP',
     summary: 'Multi-branch warehouse ERP with purchases, transfers, stock adjustments, and Arabic RTL reports.',
+    impact: '10+ exportable reports · Multi-branch inventory · Bilingual EN/AR',
     stack: ['Laravel', 'Vue 3', 'MongoDB', 'Redis'],
     thumb: '03-erp-arabia/screenshots/02-dashboard.png',
     readme: 'github-readmes/erp-arabia/README.md',
@@ -43,6 +54,7 @@ const PROJECTS = [
     name: 'BoatBnB + ERP',
     tag: 'Travel & Marine',
     summary: 'Multi-platform boat rental ecosystem with customer, provider, agency, guest, and admin applications featuring real-time chat, GPS tracking, multilingual support, Stripe payments, and an integrated ERP system.',
+    impact: '5 apps · 10 languages · Stripe + Agora + GPS · Sole developer end-to-end',
     stack: ['Laravel 12', 'Vue 3', 'Stripe', 'Agora', 'MongoDB', 'AWS S3'],
     meta: {
       industry: 'Travel & Marine Services',
@@ -83,6 +95,7 @@ const PROJECTS = [
     name: 'Estshary Admin',
     tag: 'Healthcare',
     summary: 'Healthcare admin panel with doctor/clinic management, AI chatbot, and mobile JWT APIs.',
+    impact: '118+ migrations · OpenAI doctor matching · Firebase push notifications',
     stack: ['Laravel 10', 'JWT', 'OpenAI', 'Firebase'],
     thumb: '06-estshary-admin/screenshots/01-login.png',
     readme: 'github-readmes/estshary-admin/README.md',
@@ -135,6 +148,7 @@ const PROJECTS = [
     name: 'Harvest British College',
     tag: 'Education ERP',
     summary: 'Full education ERP: CRM leads, class scheduling, payments, instructor & student portals, bilingual website — live at harvestcollege.co.uk.',
+    impact: '3 portals · 20+ reports · Live production · Spreadsheets → CRM',
     stack: ['Laravel 10', 'Livewire', 'Modules', 'Twilio'],
     meta: {
       industry: 'Education',
@@ -155,6 +169,7 @@ const PROJECTS = [
     name: 'RNS HR',
     tag: 'Enterprise HR / SaaS',
     summary: 'Multi-tenant HRMS for RNS Cinemas — biometric attendance, payroll rule engine, 22 HR modules, bilingual React admin — live at hr-app.rnscinemas.com.',
+    impact: '22 modules · Multi-tenant MongoDB · ZKTeco biometric sync · Live production',
     stack: ['Laravel 12', 'React 19', 'MongoDB', 'ZKTeco', 'Multi-Tenant'],
     thumb: '11-rns-hr/screenshots/05-employees.png',
     readme: 'github-readmes/rns-hr/README.md',
