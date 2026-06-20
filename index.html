@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Abdel Rahman Waleed Ahmed — Full-stack engineer portfolio: Laravel, Node.js, Vue, React, ERP systems, and SaaS platforms.">
+  <title>Abdel Rahman Waleed Ahmed — Full-Stack Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header" id="top">
+    <nav class="nav container">
+      <a class="logo" href="#top">AW<span>.</span></a>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#case-studies">Case Studies</a></li>
+        <li><a href="#architecture">Architecture</a></li>
+        <li><a href="#docs">Docs</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact" class="btn btn-sm">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <p class="eyebrow">Full-Stack Engineer · Laravel · Node.js · Vue · React</p>
+          <h1>Abdel Rahman Waleed Ahmed</h1>
+          <p class="hero-lead">
+            I build production ERP systems, B2B platforms, and bilingual SaaS products —
+            from warehouse inventory and HR payroll to real-estate marketplaces and healthcare booking.
+          </p>
+          <div class="hero-actions">
+            <a href="#projects" class="btn btn-primary">View Projects</a>
+          <a href="assets/Abdel_Rahman_Waleed_Ahmed_CV_Final_2026.pdf" class="btn btn-ghost" download>Download CV</a>
+          <a href="docs/architecture/OVERVIEW.md" class="btn btn-ghost">Architecture Docs</a>
+          </div>
+          <div class="hero-stats">
+            <div><strong>9</strong><span>Production Projects</span></div>
+            <div><strong>240+</strong><span>API Endpoints (BlackHorse)</span></div>
+            <div><strong>EN/AR</strong><span>Bilingual Systems</span></div>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div class="code-window">
+            <div class="code-bar"><span></span><span></span><span></span></div>
+            <pre><code><span class="c-kw">const</span> stack = {
+  backend: [<span class="c-str">'Laravel 12'</span>, <span class="c-str">'Node.js'</span>, <span class="c-str">'Express'</span>],
+  frontend: [<span class="c-str">'Vue 3'</span>, <span class="c-str">'React 19'</span>, <span class="c-str">'Tailwind'</span>],
+  data: [<span class="c-str">'MongoDB'</span>, <span class="c-str">'MySQL'</span>, <span class="c-str">'Redis'</span>],
+  realtime: <span class="c-str">'Socket.IO'</span>,
+  deploy: [<span class="c-str">'Docker'</span>, <span class="c-str">'CI/CD'</span>]
+};</code></pre>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2>Featured Projects</h2>
+          <p>Enterprise systems delivered across B2B, ERP, HR, healthcare, and real estate.</p>
+        </div>
+        <div class="project-grid" id="project-grid"></div>
+      </div>
+    </section>
+
+    <section id="case-studies" class="section section-alt">
+      <div class="container">
+        <div class="section-head">
+          <h2>Case Studies</h2>
+          <p>Business problems solved with measurable impact.</p>
+        </div>
+        <div class="case-grid" id="case-grid"></div>
+      </div>
+    </section>
+
+    <section id="architecture" class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2>Architecture</h2>
+          <p>Layered, scalable designs with clear separation of concerns.</p>
+        </div>
+        <div class="arch-cards">
+          <article class="arch-card">
+            <h3>Laravel Modular ERP</h3>
+            <p>nwidart modules, Spatie RBAC, service layer, repository pattern for law firm & healthcare admin.</p>
+            <a href="docs/architecture/easternco-law-erp.md">Eastern & Co diagram →</a>
+          </article>
+          <article class="arch-card">
+            <h3>Vue SPA + Laravel API</h3>
+            <p>Sanctum auth, Pinia state, Redis cache, MongoDB for multi-branch warehouse ERP.</p>
+            <a href="docs/architecture/erp-arabia.md">ERP Arabia diagram →</a>
+          </article>
+          <article class="arch-card">
+            <h3>Node.js Real-time B2B</h3>
+            <p>Express REST + Socket.IO, JWT roles, MongoDB, Flutter admin, Firebase push.</p>
+            <a href="docs/architecture/blackhorse.md">BlackHorse diagram →</a>
+          </article>
+          <article class="arch-card">
+            <h3>React + MongoDB HR</h3>
+            <p>Rule engine for payroll, ZKTeco biometric integration, bilingual React SPA.</p>
+            <a href="docs/architecture/hr-system.md">HR System diagram →</a>
+          </article>
+        </div>
+        <p class="arch-link"><a href="docs/architecture/OVERVIEW.md">View all architecture diagrams →</a></p>
+      </div>
+    </section>
+
+    <section id="docs" class="section section-alt">
+      <div class="container">
+        <div class="section-head">
+          <h2>Documentation & DevOps</h2>
+          <p>GitHub-ready README files, API references, and CI/CD pipeline examples.</p>
+        </div>
+        <div class="docs-grid">
+          <a class="doc-card" href="github-readmes/">
+            <span class="doc-icon">📦</span>
+            <h3>GitHub READMEs</h3>
+            <p>Setup guides, tech stacks, and screenshot galleries for each repo.</p>
+          </a>
+          <a class="doc-card" href="docs/api/OVERVIEW.md">
+            <span class="doc-icon">🔌</span>
+            <h3>API Documentation</h3>
+            <p>REST endpoint references for BlackHorse, ERP, HR, TRC, and Estshary.</p>
+          </a>
+          <a class="doc-card" href="github-examples/.github/workflows/">
+            <span class="doc-icon">⚙️</span>
+            <h3>CI/CD Examples</h3>
+            <p>GitHub Actions for Laravel tests, Node.js builds, and Docker deploy.</p>
+          </a>
+          <a class="doc-card" href="case-studies/">
+            <span class="doc-icon">📊</span>
+            <h3>Case Studies</h3>
+            <p>Problem → solution → business impact for each major project.</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2>Technical Skills</h2>
+        </div>
+        <div class="skills-wrap">
+          <div class="skill-group">
+            <h4>Backend</h4>
+            <div class="tags">
+              <span>Laravel 10/12</span><span>Node.js</span><span>Express</span><span>REST APIs</span><span>Socket.IO</span>
+            </div>
+          </div>
+          <div class="skill-group">
+            <h4>Frontend</h4>
+            <div class="tags">
+              <span>Vue 3</span><span>React 19</span><span>Pinia</span><span>Tailwind CSS</span><span>Blade</span>
+            </div>
+          </div>
+          <div class="skill-group">
+            <h4>Data & Auth</h4>
+            <div class="tags">
+              <span>MongoDB</span><span>MySQL</span><span>Redis</span><span>Sanctum</span><span>JWT</span><span>Spatie RBAC</span>
+            </div>
+          </div>
+          <div class="skill-group">
+            <h4>Integrations</h4>
+            <div class="tags">
+              <span>Stripe</span><span>Firebase</span><span>Twilio</span><span>SendGrid</span><span>AWS S3</span><span>OpenAI</span>
+            </div>
+          </div>
+          <div class="skill-group">
+            <h4>DevOps</h4>
+            <div class="tags">
+              <span>Docker</span><span>GitHub Actions</span><span>CI/CD</span><span>Playwright</span><span>PHPUnit</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section section-contact">
+      <div class="container contact-box">
+        <h2>Let's build something together</h2>
+        <p>Open to full-stack roles, contract ERP work, and SaaS product engineering.</p>
+        <div class="contact-links">
+          <a href="mailto:abdelrahman.waleed500@gmail.com" class="btn btn-primary">Email Me</a>
+          <a href="https://github.com/Abdelrahmanwaleed930" class="btn btn-ghost" target="_blank" rel="noopener">GitHub</a>
+          <a href="https://linkedin.com/in/abdelrahman-waleed-456081278" class="btn btn-ghost" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="tel:+201028805921" class="btn btn-ghost">(+20) 1028805921</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2026 Abdel Rahman Waleed Ahmed · Portfolio built with documented architecture, API specs, and CI/CD examples.</p>
+    </div>
+  </footer>
+
+  <script src="js/projects.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
