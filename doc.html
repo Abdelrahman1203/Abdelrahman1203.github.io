@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#ffffff">
+  <title>Documentation — Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav container">
+      <a class="logo" href="index.html">AW<span>.</span></a>
+      <ul class="nav-links">
+        <li><a href="index.html#projects">Projects</a></li>
+        <li><a href="index.html#case-studies">Case Studies</a></li>
+        <li><a href="index.html#docs">Docs</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="section doc-page">
+    <div class="container">
+      <div id="doc-loading" class="doc-loading">Loading document…</div>
+      <article id="doc-content" class="md-body" hidden></article>
+      <div id="doc-error" class="doc-error" hidden>
+        <h2>Document not found</h2>
+        <p><a href="index.html">← Back to portfolio</a></p>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p><a href="index.html">← Portfolio home</a></p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script src="js/doc-viewer.js"></script>
+</body>
+</html>

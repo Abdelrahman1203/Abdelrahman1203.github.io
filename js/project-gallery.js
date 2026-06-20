@@ -28,10 +28,10 @@
   `;
 
   docs.innerHTML = `
-    <a href="${project.readme}" class="btn btn-ghost">README</a>
-    <a href="${project.caseStudy}" class="btn btn-ghost">Case Study</a>
-    <a href="${project.arch}" class="btn btn-ghost">Architecture</a>
-    <a href="${project.api}" class="btn btn-ghost">API Docs</a>
+    <a href="doc.html?path=${encodeURIComponent(project.readme)}" class="btn btn-ghost">README</a>
+    <a href="doc.html?path=${encodeURIComponent(project.caseStudy)}" class="btn btn-ghost">Case Study</a>
+    <a href="doc.html?path=${encodeURIComponent(project.arch)}" class="btn btn-ghost">Architecture</a>
+    <a href="doc.html?path=${encodeURIComponent(project.api)}" class="btn btn-ghost">API Docs</a>
     ${project.repo ? `<a href="${project.repo}" class="btn btn-primary" target="_blank" rel="noopener">GitHub Repo</a>` : ''}
     <a href="https://github.com/Abdelrahman1203/Abdelrahman1203.github.io" class="btn btn-ghost" target="_blank" rel="noopener">Portfolio Source</a>
   `;

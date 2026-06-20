@@ -7,6 +7,10 @@ document.addEventListener('DOMContentLoaded', () => {
 const PORTFOLIO_URL = 'https://abdelrahman1203.github.io/';
 const PORTFOLIO_SOURCE = 'https://github.com/Abdelrahman1203/Abdelrahman1203.github.io';
 
+function docUrl(path) {
+  return `doc.html?path=${encodeURIComponent(path)}`;
+}
+
 function renderProjects() {
   const grid = document.getElementById('project-grid');
   if (!grid || typeof PROJECTS === 'undefined') return;
@@ -25,10 +29,10 @@ function renderProjects() {
         <div class="project-stack">${p.stack.map((s) => `<span>${s}</span>`).join('')}</div>
         <div class="project-links">
           <a href="project.html?id=${p.id}">Screenshots (${typeof GALLERY_COUNTS !== 'undefined' && GALLERY_COUNTS[p.id] ? GALLERY_COUNTS[p.id] : '→'})</a>
-          <a href="${p.readme}">README</a>
-          <a href="${p.caseStudy}">Case Study</a>
-          <a href="${p.arch}">Architecture</a>
-          <a href="${p.api}">API Docs</a>
+          <a href="${docUrl(p.readme)}">README</a>
+          <a href="${docUrl(p.caseStudy)}">Case Study</a>
+          <a href="${docUrl(p.arch)}">Architecture</a>
+          <a href="${docUrl(p.api)}">API Docs</a>
           ${p.repo ? `<a href="${p.repo}" target="_blank" rel="noopener">GitHub Repo</a>` : ''}
         </div>
       </div>
@@ -45,7 +49,7 @@ function renderCaseStudies() {
       <h3>${c.title}</h3>
       <p class="impact">${c.impact}</p>
       <p>${c.summary}</p>
-      <a href="${c.link}">Read case study →</a>
+      <a href="${docUrl(c.link)}">Read case study →</a>
       ${c.projectId ? `<a href="project.html?id=${c.projectId}" class="case-gallery-link">View screenshots →</a>` : ''}
     </article>
   `).join('');
