@@ -23,6 +23,7 @@
     <span class="project-tag">${project.tag}</span>
     <h2>${project.name}</h2>
     <p>${project.summary}</p>
+    ${typeof renderProjectMeta === 'function' ? renderProjectMeta(project) : ''}
     <div class="project-stack" style="margin-top:1rem">${project.stack.map((s) => `<span>${s}</span>`).join('')}</div>
   `;
 
@@ -31,7 +32,8 @@
     <a href="${project.caseStudy}" class="btn btn-ghost">Case Study</a>
     <a href="${project.arch}" class="btn btn-ghost">Architecture</a>
     <a href="${project.api}" class="btn btn-ghost">API Docs</a>
-    ${project.repo ? `<a href="${project.repo}" class="btn btn-primary" target="_blank" rel="noopener">GitHub</a>` : ''}
+    ${project.repo ? `<a href="${project.repo}" class="btn btn-primary" target="_blank" rel="noopener">GitHub Repo</a>` : ''}
+    <a href="https://github.com/Abdelrahman1203/Abdelrahman1203.github.io" class="btn btn-ghost" target="_blank" rel="noopener">Portfolio Source</a>
   `;
 
   function groupImages(list) {

@@ -1,66 +1,45 @@
-# BoatBnB — Full Boat Booking Platform
+# BoatBnB + ERP — Multi-Platform Boat Rental Marketplace & Operations System
 
-Multi-role boat rental marketplace: mobile apps for **guests, hosts, service providers, and agencies**, plus a Vue 3 admin panel — Laravel 12 backend with Stripe, GPS discovery, Agora chat, and 10-language support.
+Multi-platform boat rental ecosystem with customer, provider, agency, guest, and admin applications featuring real-time chat, GPS tracking, multilingual support, Stripe payments, and an integrated ERP system.
+
+**Sole developer responsible for business analysis, architecture, frontend, backend, infrastructure, testing, deployment, and maintenance.**
+
+## Project Details
+
+| Field | Value |
+|-------|-------|
+| Industry | Travel & Marine Services |
+| Role | Sole Full-Stack Engineer & Solutions Architect |
+| Duration | Jul 2025 – Jan 2026 |
+| Team Size | 1 |
+| Platforms | Web Admin, Provider Portal, Customer App, Agency App |
+| Languages Supported | 10 |
 
 ## Tech Stack
 
-- **Backend:** Laravel 12, Sanctum, Socialite (Google/Apple), Firebase auth
-- **Admin:** Vue 3, Vuex, vue-i18next
-- **Payments:** Stripe (bookings, refunds, payouts)
-- **Chat:** Agora (realtime) + REST messaging API
-- **Location:** GPS coordinates, nearby/radius search, marine weather
-- **Storage:** AWS S3
+Laravel 12, PHP 8.2, Vue.js 3, MySQL, MongoDB, Redis, Sanctum, Socialite, Stripe, AWS S3, Agora SDK, Firebase, Docker, Nginx
 
-## User Roles
+## Key Features
 
-| Role | Description |
-|------|-------------|
-| Guest / client | Book boats and services, pay, chat, review |
-| Host | List and manage own boats and bookings |
-| Service provider | Offer captain, catering, events, and add-ons |
-| Agency | Manage fleets and inter-agency boat transfers |
-| Admin | Platform moderation, analytics, insurance |
-
-## Features
-
-- GPS boat discovery (search, nearby, featured, categories)
-- Booking flow with rental types, promo codes, loyalty
-- Service provider marketplace attached to boats
-- Stripe payment methods, refunds, invoices, payouts
-- Enhanced chat (messages, attachments, unread counts) + Agora voice/video
-- 10-language UI (mobile + admin)
-- Referrals, support tickets, insurance, push notifications
-- OAuth + OTP + WhatsApp verification
+- Boat discovery and search
+- GPS tracking
+- Booking and scheduling
+- Stripe payments
+- Referral system
+- Real-time chat with Agora
+- Multi-language support (10 languages)
+- Provider onboarding
+- Commission and payout management
+- Notifications
+- Admin ERP dashboard
+- Analytics and reporting
 
 ![Mobile Home Search](../../04-boatbnb-erp-monorepo/screenshots/11-mobile-home-search.png)
 
-## Mobile App Screens
+## Links
 
-| Screen | Description |
-|--------|-------------|
-| Splash & Open | App launch with language toggle |
-| Home Search | Categories: yacht, jet ski, services |
-| Yacht & Boats | Listings with captain/bareboat options |
-| Jet Ski | Hourly sea rentals |
-| Services | Catering, captain, events add-ons |
-| Rental Type | Bareboat / with captain / with owner |
-| Boat Detail | Booking flow with Stripe |
-| Profile & Bookings | User app with UAE Pass hook |
-
-## Admin Dashboard
-
-Vue 3 admin: boats, bookings, users, analytics.
-
-## Quick Start
-
-```bash
-cp .env.example .env
-composer install && npm install
-php artisan migrate
-php artisan serve --port=8208
-# Admin SPA (separate terminal)
-cd boatbnb-admin && npm install && npm run dev
-```
+- **Live portfolio:** https://abdelrahman1203.github.io/project.html?id=04-boatbnb-erp-monorepo
+- **Full portfolio repo:** https://github.com/Abdelrahman1203/Abdelrahman1203.github.io
 
 ## Documentation
 

@@ -131,6 +131,22 @@ body {
 .project-links a { font-size: 0.8rem; color: var(--accent); text-decoration: none; font-weight: 500; }
 .project-links a:hover { text-decoration: underline; }
 
+.project-meta {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 0.25rem 0.75rem;
+  margin: 0.75rem 0; font-size: 0.75rem; color: var(--muted);
+}
+.project-meta span strong { color: var(--text); font-weight: 600; }
+.project-note {
+  font-size: 0.78rem; color: var(--text); font-style: italic;
+  margin: 0.5rem 0 0.75rem; padding: 0.5rem 0.65rem;
+  background: var(--accent-soft); border-left: 3px solid var(--accent); border-radius: 4px;
+}
+.project-features {
+  margin: 0 0 0.75rem 1rem; font-size: 0.75rem; color: var(--muted);
+  columns: 2; column-gap: 1rem;
+}
+.project-features li { margin-bottom: 0.2rem; break-inside: avoid; }
+
 /* Case studies */
 .case-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 1.5rem; }
 .case-card {

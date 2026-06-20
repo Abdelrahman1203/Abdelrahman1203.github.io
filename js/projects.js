@@ -40,10 +40,24 @@ const PROJECTS = [
   },
   {
     id: '04-boatbnb-erp-monorepo',
-    name: 'BoatBnB',
-    tag: 'Marketplace',
-    summary: 'Full boat booking platform — guest, host, service provider, agency, and admin apps with GPS discovery, Stripe, Agora chat, and 10 languages.',
-    stack: ['Laravel 12', 'Vue 3', 'Stripe', 'Agora', 'AWS S3'],
+    name: 'BoatBnB + ERP',
+    tag: 'Travel & Marine',
+    summary: 'Multi-platform boat rental ecosystem with customer, provider, agency, guest, and admin applications featuring real-time chat, GPS tracking, multilingual support, Stripe payments, and an integrated ERP system.',
+    stack: ['Laravel 12', 'Vue 3', 'Stripe', 'Agora', 'MongoDB', 'AWS S3'],
+    meta: {
+      industry: 'Travel & Marine Services',
+      role: 'Sole Full-Stack Engineer & Solutions Architect',
+      duration: 'Jul 2025 – Jan 2026',
+      teamSize: '1',
+      platforms: 'Web Admin, Provider Portal, Customer App, Agency App',
+      languages: '10',
+      soleDeveloper: 'Sole developer responsible for business analysis, architecture, frontend, backend, infrastructure, testing, deployment, and maintenance.',
+      features: [
+        'Boat discovery and search', 'GPS tracking', 'Booking and scheduling', 'Stripe payments',
+        'Referral system', 'Real-time chat with Agora', 'Multi-language support', 'Provider onboarding',
+        'Commission and payout management', 'Notifications', 'Admin ERP dashboard', 'Analytics and reporting',
+      ],
+    },
     thumb: '04-boatbnb-erp-monorepo/screenshots/11-mobile-home-search.png',
     readme: 'github-readmes/boatbnb-erp/README.md',
     caseStudy: 'case-studies/boatbnb-erp.md',
@@ -120,8 +134,15 @@ const PROJECTS = [
     id: '10-harvest-british-college',
     name: 'Harvest British College',
     tag: 'Education ERP',
-    summary: 'Full education ERP: CRM leads, class scheduling, payments, instructor & student portals, bilingual website.',
+    summary: 'Full education ERP: CRM leads, class scheduling, payments, instructor & student portals, bilingual website — live at harvestcollege.co.uk.',
     stack: ['Laravel 10', 'Livewire', 'Modules', 'Twilio'],
+    meta: {
+      industry: 'Education',
+      role: 'Software Developer',
+      duration: 'Jul 2024 – Jun 2025',
+      live: 'harvestcollege.co.uk',
+      soleDeveloper: 'Sole developer responsible for business analysis, architecture, frontend, backend, infrastructure, testing, deployment, and maintenance.',
+    },
     thumb: '10-harvest-british-college/screenshots/11-admin-login.png',
     readme: 'github-readmes/harvest-british-college/README.md',
     caseStudy: 'case-studies/harvest-british-college.md',
@@ -130,6 +151,25 @@ const PROJECTS = [
     repo: 'https://github.com/Abdelrahman1203/harvest-british-college',
   },
 ];
+
+function renderProjectMeta(p) {
+  if (!p.meta) return '';
+  const m = p.meta;
+  const rows = [];
+  if (m.industry) rows.push(`<span><strong>Industry:</strong> ${m.industry}</span>`);
+  if (m.role) rows.push(`<span><strong>Role:</strong> ${m.role}</span>`);
+  if (m.duration) rows.push(`<span><strong>Duration:</strong> ${m.duration}</span>`);
+  if (m.teamSize) rows.push(`<span><strong>Team:</strong> ${m.teamSize}</span>`);
+  if (m.platforms) rows.push(`<span><strong>Platforms:</strong> ${m.platforms}</span>`);
+  if (m.languages) rows.push(`<span><strong>Languages:</strong> ${m.languages}</span>`);
+  if (m.live) rows.push(`<span><strong>Live:</strong> ${m.live}</span>`);
+  let html = `<div class="project-meta">${rows.join('')}</div>`;
+  if (m.soleDeveloper) html += `<p class="project-note">${m.soleDeveloper}</p>`;
+  if (m.features?.length) {
+    html += `<ul class="project-features">${m.features.map((f) => `<li>${f}</li>`).join('')}</ul>`;
+  }
+  return html;
+}
 
 const CASE_STUDIES = [
   {
@@ -182,9 +222,9 @@ const CASE_STUDIES = [
     projectId: '10-harvest-british-college',
   },
   {
-    title: 'BoatBnB — Full Boat Booking Platform',
-    impact: '5 roles · 10 languages · GPS + Stripe + Agora chat',
-    summary: 'Multi-app boat rental ecosystem for guests, hosts, service providers, agencies, and admin with GPS discovery and Stripe payments.',
+    title: 'BoatBnB + ERP — Multi-Platform Boat Rental Marketplace',
+    impact: 'Sole developer · 5 apps · 10 languages · GPS + Stripe + Agora',
+    summary: 'Multi-platform boat rental ecosystem with customer, provider, agency, guest, and admin applications featuring real-time chat, GPS tracking, Stripe payments, and integrated ERP.',
     link: 'case-studies/boatbnb-erp.md',
     projectId: '04-boatbnb-erp-monorepo',
   },

@@ -4,6 +4,9 @@ document.addEventListener('DOMContentLoaded', () => {
   setupNav();
 });
 
+const PORTFOLIO_URL = 'https://abdelrahman1203.github.io/';
+const PORTFOLIO_SOURCE = 'https://github.com/Abdelrahman1203/Abdelrahman1203.github.io';
+
 function renderProjects() {
   const grid = document.getElementById('project-grid');
   if (!grid || typeof PROJECTS === 'undefined') return;
@@ -18,6 +21,7 @@ function renderProjects() {
         <span class="project-tag">${p.tag}</span>
         <h3>${p.name}</h3>
         <p>${p.summary}</p>
+        ${renderProjectMeta(p)}
         <div class="project-stack">${p.stack.map((s) => `<span>${s}</span>`).join('')}</div>
         <div class="project-links">
           <a href="project.html?id=${p.id}">Screenshots (${typeof GALLERY_COUNTS !== 'undefined' && GALLERY_COUNTS[p.id] ? GALLERY_COUNTS[p.id] : '→'})</a>

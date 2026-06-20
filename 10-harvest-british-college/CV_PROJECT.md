@@ -29,6 +29,14 @@ See `screenshots/` — live website (harvestcollege.co.uk), admin login, custome
 - Admin: `user@email.com` | `password`
 - Production: [harvestcollege.co.uk](https://harvestcollege.co.uk)
 
+## Links
+- **Live production:** [harvestcollege.co.uk](https://harvestcollege.co.uk)
+- **Portfolio gallery:** https://abdelrahman1203.github.io/project.html?id=10-harvest-british-college
+- **GitHub (project):** https://github.com/Abdelrahman1203/harvest-british-college
+- **GitHub (full portfolio):** https://github.com/Abdelrahman1203/Abdelrahman1203.github.io
+
+**Sole developer responsible for business analysis, architecture, frontend, backend, infrastructure, testing, deployment, and maintenance.**
+
 ## Source
 - Full codebase: `harvest/` (local development)
 - Production deployment: `sys/sys/` (Harvest SYS)

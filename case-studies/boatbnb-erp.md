@@ -1,59 +1,71 @@
-# Case Study: BoatBnB — Full Boat Booking Platform
+# Case Study: BoatBnB + ERP — Multi-Platform Boat Rental Marketplace
 
 ## Client Context
 
-A marina-tech startup needed a **complete boat rental ecosystem** — not just a listing site — covering guests who book trips, individual boat owners, marina agencies managing fleets, on-water service providers, and internal admin operations across multiple countries and languages.
+A marine-tech startup needed a **complete boat rental ecosystem** — marketplace plus back-office ERP — covering guests, boat owners, marina agencies, on-water service providers, and internal admin operations across **10 languages**.
 
 ## Problem
 
-- Fragmented booking flows: guests, hosts, and service providers had no shared platform
-- No GPS-aware discovery for boats anchored or moored at different marinas
-- Payments, payouts, and refunds required manual reconciliation
-- Support and coordination between guests and hosts relied on phone calls, not in-app chat
-- Product needed to launch in **10 languages** for Gulf and international markets
+- No unified platform for customers, providers, agencies, and administrators
+- Manual payment reconciliation and off-platform coordination between booking parties
+- No GPS-aware discovery for boats at different marinas
+- Product required multilingual launch for Gulf and international markets
+- Back-office ERP needed alongside customer-facing apps in one maintainable codebase
 
 ## Solution
 
-Designed and built **BoatBnB** — a Laravel 12 backend powering **five role-based experiences**:
+**Sole developer responsible for business analysis, architecture, frontend, backend, infrastructure, testing, deployment, and maintenance.**
+
+Designed and delivered **BoatBnB + ERP** — a Laravel 12 monorepo with five role-based applications:
 
 | Role | Capabilities |
 |------|--------------|
-| Guest / client | Search, book, pay (Stripe), chat, reviews, wishlist, referrals |
-| Host | List boats, set availability, accept bookings, manage media |
+| Customer / guest | Search, book, pay (Stripe), chat (Agora), reviews, referrals |
 | Service provider | Publish add-on services (captain, catering, events) |
-| Agency | Fleet management, boat transfers between agencies |
-| Admin | Moderation, analytics, insurance, user/boat approval |
+| Host | List boats, manage availability, accept bookings |
+| Agency | Fleet management, inter-agency boat transfers |
+| Admin | Moderation, ERP dashboard, analytics, insurance, payouts |
 
-### Core modules
+### Key modules
 
-- **GPS boat discovery** — latitude/longitude on every listing, nearby search with radius filters, featured and category browse
-- **Booking engine** — rental types (bareboat, with captain, with owner), promo codes, loyalty tiers, insurance add-ons
-- **Stripe payments** — payment methods, refunds, invoices, host/agency payouts
-- **Chat** — REST messaging with attachments + **Agora** for realtime voice/video between parties
-- **Operations** — push notifications, support tickets, saved searches, marine weather by boat location
-- **Vue 3 admin** — dashboards for boats, bookings, users, and analytics
+- **Boat discovery & GPS tracking** — nearby search, radius filters, marine weather
+- **Booking engine** — scheduling, rental types, promo codes, loyalty, insurance
+- **Stripe payments** — bookings, commissions, refunds, provider payouts
+- **Real-time chat with Agora** — messaging API + voice/video calls
+- **10-language localization** — full mobile and admin i18n workflows
+- **Integrated ERP** — admin operations, reporting, moderation in same monorepo
+
+## Project Details
+
+| Field | Value |
+|-------|-------|
+| Industry | Travel & Marine Services |
+| Role | Sole Full-Stack Engineer & Solutions Architect |
+| Duration | Jul 2025 – Jan 2026 |
+| Team Size | 1 |
+| Platforms | Web Admin, Provider Portal, Customer App, Agency App |
+| Languages | 10 |
 
 ## Business Impact
 
 | Metric | Result |
 |--------|--------|
-| User roles supported | 5 distinct apps (guest, host, provider, agency, admin) |
+| Applications delivered | 5 role-based apps + admin ERP |
 | Languages | 10-language mobile + admin UI |
-| Discovery | GPS nearby search replaces manual marina browsing |
-| Payments | End-to-end Stripe — booking, refund, payout |
-| Communication | In-app chat + Agora replaces off-platform phone coordination |
-| Media | AWS S3 pipeline for boat photos, videos, and documents |
+| Payments | End-to-end Stripe — booking, commission, payout |
+| Communication | Agora realtime chat + REST messaging |
+| Discovery | GPS tracking replaces manual marina browsing |
+| Ownership | Full lifecycle as sole developer |
 
 ## Technologies
 
-Laravel 12 · Vue 3 · Stripe · Agora · AWS S3 · Sanctum · Firebase · Socialite · Redis · MySQL
+Laravel 12 · PHP 8.2 · Vue.js 3 · MySQL · MongoDB · Redis · Sanctum · Socialite · Stripe · AWS S3 · Agora SDK · Firebase · Docker · Nginx
 
-## Screenshots
+## Links
 
-View the full gallery: [BoatBnB mobile + admin screenshots](../website/project.html?id=04-boatbnb-erp-monorepo)
-
-Mobile: splash, home search, yacht/boat listings, jet ski, services marketplace, rental type picker, boat detail, user profile, bookings.  
-Admin: login, dashboard, boats, bookings, users, analytics.
+- **Portfolio gallery:** [View screenshots](../website/project.html?id=04-boatbnb-erp-monorepo)
+- **GitHub (project):** https://github.com/Abdelrahman1203/boatbnb-erp-monorepo
+- **GitHub (full portfolio):** https://github.com/Abdelrahman1203/Abdelrahman1203.github.io
 
 ---
 
