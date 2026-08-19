@@ -8,12 +8,29 @@ function docUrl(path) {
   return `doc.html?path=${encodeURIComponent(path)}`;
 }
 
+function projectThumbHtml(p) {
+  if (!p.thumb) {
+    return `<div class="placeholder">${p.name.charAt(0)}</div>`;
+  }
+  return `<img src="${p.thumb}" alt="${p.name} screenshot" loading="lazy"
+          onerror="this.parentElement.innerHTML='<div class=\\'placeholder\\'>${p.name.charAt(0)}</div>'">`;
+}
+
 function projectCardHtml(p, compact = false) {
+  const galleryCount = typeof GALLERY_COUNTS !== 'undefined' ? GALLERY_COUNTS[p.id] : 0;
+  const screenshotLabel = galleryCount > 0 ? `Screenshots (${galleryCount})` : 'Project details';
+  const docLinks = [
+    p.readme ? `<a href="${docUrl(p.readme)}">README</a>` : '',
+    p.caseStudy && p.caseStudy !== p.readme ? `<a href="${docUrl(p.caseStudy)}">Case Study</a>` : '',
+    p.arch && p.arch !== p.readme && p.arch !== p.caseStudy ? `<a href="${docUrl(p.arch)}">Architecture</a>` : '',
+    p.api ? `<a href="${docUrl(p.api)}">API Docs</a>` : '',
+    p.repo ? `<a href="${p.repo}" target="_blank" rel="noopener">GitHub</a>` : '',
+  ].filter(Boolean).join('');
+
   return `
     <article class="project-card${compact ? ' project-card-compact' : ''}">
       <div class="project-thumb">
-        <img src="${p.thumb}" alt="${p.name} screenshot" loading="lazy"
-          onerror="this.parentElement.innerHTML='<div class=\\'placeholder\\'>${p.name.charAt(0)}</div>'">
+        ${projectThumbHtml(p)}
       </div>
       <div class="project-body">
         <span class="project-tag">${p.tag}</span>
@@ -23,11 +40,8 @@ function projectCardHtml(p, compact = false) {
         ${renderProjectMeta(p)}
         <div class="project-stack">${p.stack.map((s) => `<span>${s}</span>`).join('')}</div>
         <div class="project-links">
-          <a href="project.html?id=${p.id}">Screenshots (${typeof GALLERY_COUNTS !== 'undefined' && GALLERY_COUNTS[p.id] ? GALLERY_COUNTS[p.id] : '→'})</a>
-          <a href="${docUrl(p.readme)}">README</a>
-          <a href="${docUrl(p.caseStudy)}">Case Study</a>
-          <a href="${docUrl(p.arch)}">Architecture</a>
-          ${p.repo ? `<a href="${p.repo}" target="_blank" rel="noopener">GitHub</a>` : ''}
+          <a href="project.html?id=${p.id}">${screenshotLabel}</a>
+          ${docLinks}
         </div>
       </div>
     </article>
@@ -72,7 +86,9 @@ function renderCaseStudies() {
       <p class="impact">${c.impact}</p>
       <p>${c.summary}</p>
       <a href="${docUrl(c.link)}">Read case study →</a>
-      ${c.projectId ? `<a href="project.html?id=${c.projectId}" class="case-gallery-link">View screenshots →</a>` : ''}
+      ${c.projectId && (typeof GALLERY_COUNTS !== 'undefined' ? GALLERY_COUNTS[c.projectId] : 0) > 0
+        ? `<a href="project.html?id=${c.projectId}" class="case-gallery-link">View screenshots →</a>`
+        : ''}
     </article>
   `).join('');
 }

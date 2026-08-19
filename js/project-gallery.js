@@ -27,14 +27,17 @@
     <div class="project-stack" style="margin-top:1rem">${project.stack.map((s) => `<span>${s}</span>`).join('')}</div>
   `;
 
-  docs.innerHTML = `
-    <a href="doc.html?path=${encodeURIComponent(project.readme)}" class="btn btn-ghost">README</a>
-    <a href="doc.html?path=${encodeURIComponent(project.caseStudy)}" class="btn btn-ghost">Case Study</a>
-    <a href="doc.html?path=${encodeURIComponent(project.arch)}" class="btn btn-ghost">Architecture</a>
-    <a href="doc.html?path=${encodeURIComponent(project.api)}" class="btn btn-ghost">API Docs</a>
-    ${project.repo ? `<a href="${project.repo}" class="btn btn-primary" target="_blank" rel="noopener">GitHub Repo</a>` : ''}
-    <a href="https://github.com/Abdelrahman1203/Abdelrahman1203.github.io" class="btn btn-ghost" target="_blank" rel="noopener">Portfolio Source</a>
-  `;
+  docs.innerHTML = [
+    project.readme ? `<a href="doc.html?path=${encodeURIComponent(project.readme)}" class="btn btn-ghost">README</a>` : '',
+    project.caseStudy && project.caseStudy !== project.readme
+      ? `<a href="doc.html?path=${encodeURIComponent(project.caseStudy)}" class="btn btn-ghost">Case Study</a>` : '',
+    project.arch && project.arch !== project.readme && project.arch !== project.caseStudy
+      ? `<a href="doc.html?path=${encodeURIComponent(project.arch)}" class="btn btn-ghost">Architecture</a>` : '',
+    project.api
+      ? `<a href="doc.html?path=${encodeURIComponent(project.api)}" class="btn btn-ghost">API Docs</a>` : '',
+    project.repo ? `<a href="${project.repo}" class="btn btn-primary" target="_blank" rel="noopener">GitHub Repo</a>` : '',
+    '<a href="https://github.com/Abdelrahman1203/Abdelrahman1203.github.io" class="btn btn-ghost" target="_blank" rel="noopener">Portfolio Source</a>',
+  ].filter(Boolean).join('');
 
   function groupImages(list) {
     const mobile = list.filter((p) => p.includes('/mobile/') || p.includes('mobile-'));

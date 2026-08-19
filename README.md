@@ -1,30 +1,24 @@
 # Portfolio Package — Abdel Rahman Waleed Ahmed
 
-Complete portfolio deliverables for 10 production projects: CV docs, screenshots, website, GitHub READMEs, architecture diagrams, API docs, CI/CD examples, and case studies.
+Complete portfolio deliverables for production projects: CV docs, screenshots, website, GitHub READMEs, architecture diagrams, API docs, CI/CD examples, and case studies.
 
 ## Quick Links
 
 | Deliverable | Location | Description |
 |-------------|----------|-------------|
 | **Portfolio Website** | [website/](./website/index.html) | Static showcase site — open in browser |
+| **CV PDF Generator** | [generate-cv-pdf.py](./generate-cv-pdf.py) | Regenerate 2-page CV PDF |
 | **GitHub READMEs** | [github-readmes/](./github-readmes/) | Copy-paste README for each repo |
 | **Architecture Diagrams** | [docs/architecture/](./docs/architecture/OVERVIEW.md) | Mermaid system diagrams |
 | **API Documentation** | [docs/api/](./docs/api/OVERVIEW.md) | REST endpoint references |
 | **CI/CD Examples** | [github-examples/](./github-examples/) | GitHub Actions + Docker Compose |
 | **Case Studies** | [case-studies/](./case-studies/) | Business impact write-ups |
-| **CV Project Docs** | `01-*` … `10-*` folders | Per-project CV text + screenshots |
+| **CV Project Docs** | `01-*` … `14-*` folders | Per-project CV text + screenshots |
 
 ## Open Portfolio Website
 
 ```powershell
 start portfolio-cv/website/index.html
-```
-
-Or serve locally:
-
-```powershell
-cd portfolio-cv/website
-npx --yes serve . -l 3000
 ```
 
 ## Projects
@@ -42,28 +36,23 @@ npx --yes serve . -l 3000
 | 09 | [09-trc-referrals/](./09-trc-referrals/) | TRC Referrals | Laravel, MySQL, Sanctum |
 | 10 | [10-harvest-british-college/](./10-harvest-british-college/) | Harvest British College (SYS) | Laravel, Livewire, Modules, Twilio |
 | 11 | [11-rns-hr/](./11-rns-hr/) | RNS HR (RNS Cinemas) | Laravel 12, React 19, MongoDB, ZKTeco |
+| 12 | [12-cinema-pos/](./12-cinema-pos/) | Cinema Concession POS (Al Arabia) | Laravel, React 19, Flutter, PostgreSQL |
+| 13 | [13-cinema-booking/](./13-cinema-booking/) | Cinema Booking (RNS) | Angular 19, Spring Boot, Symfony, MongoDB |
+| 14 | [14-cineasset/](./14-cineasset/) | CineAsset Desktop | Electron, React, MongoDB |
 
-## Publishing to GitHub
-
-1. Create a repo per project (see [github-readmes/README.md](./github-readmes/README.md))
-2. Copy the matching README to repo root
-3. Copy CI/CD workflows from [github-examples/.github/workflows/](./github-examples/.github/workflows/)
-4. Add architecture and API docs to a `docs/` folder
-5. Link case study in repo wiki or `docs/CASE_STUDY.md`
-
-## Skills Summary
-
-PHP (Laravel 10/12) · Node.js · Express · Vue 3 · React 19 · MongoDB · MySQL · Redis · Socket.IO · JWT · Sanctum · Firebase · Stripe · Tailwind CSS · Docker · CI/CD
-
-## Screenshot Capture
+## Regenerate CV PDF
 
 ```powershell
 cd portfolio-cv
-node capture-portfolio-validated.mjs
+python generate-cv-pdf.py
 ```
 
-See [capture-log-validated.json](./capture-log-validated.json) for validation results.
+## Skills Summary
+
+PHP (Laravel 10/12) · Node.js · React 19 · Vue 3 · Angular 19 · Flutter · PostgreSQL · MongoDB · MySQL · Redis · Electron · FastAPI · Docker · Kubernetes · CI/CD · OpenAPI
 
 ---
 
-**Author:** Abdel Rahman Waleed Ahmed
+**Author:** Abdel Rahman Waleed Ahmed  
+**Portfolio:** https://abdelrahman1203.github.io/  
+**GitHub:** https://github.com/Abdelrahman1203
