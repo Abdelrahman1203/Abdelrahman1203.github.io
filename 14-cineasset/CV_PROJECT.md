@@ -1,5 +1,7 @@
 # CineAsset — Cinema Asset & Maintenance Desktop App
 
+**Client:** Al Arabia Cinema
+
 ## One-line summary
 Electron desktop app for cinema asset and maintenance tracking — React renderer, MongoDB, JWT sessions, audit log, and Windows production builds.
 

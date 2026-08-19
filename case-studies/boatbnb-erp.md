@@ -63,7 +63,7 @@ Laravel 12 · PHP 8.2 · Vue.js 3 · MySQL · MongoDB · Redis · Sanctum · Soc
 
 ## Links
 
-- **Portfolio gallery:** [View screenshots](../website/project.html?id=04-boatbnb-erp-monorepo)
+- **Portfolio:** https://abdelrahman1203.github.io/project.html?id=04-boatbnb-erp-monorepo
 - **GitHub (project):** https://github.com/Abdelrahman1203/boatbnb-erp-monorepo
 - **GitHub (full portfolio):** https://github.com/Abdelrahman1203/Abdelrahman1203.github.io
 

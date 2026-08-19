@@ -1,4 +1,6 @@
-# RNS HR — Multi-Tenant HR Platform (RNS Cinemas)
+# RNS HR — Multi-Tenant HR Platform (Al Arabia Cinema)
+
+**Client:** Al Arabia Cinema
 
 ## One-line summary
 Enterprise HRMS for cinema branch operations — employees, ZKTeco biometric attendance, configurable payroll rules, leave/violations, multi-tenant MongoDB SaaS, and bilingual React admin — live at **hr-app.rnscinemas.com**.
@@ -20,7 +22,7 @@ Enterprise HRMS for cinema branch operations — employees, ZKTeco biometric att
 - **Bilingual UI:** English + Arabic (RTL)
 
 ## CV bullet points
-- Built **RNS HR** (Laravel 12 + React 19 + MongoDB) for **RNS Cinemas** — production HRMS at hr-app.rnscinemas.com with 22 modular domains.
+- Built **RNS HR** (Laravel 12 + React 19 + MongoDB) for **Al Arabia Cinema** — production HRMS at hr-app.rnscinemas.com with 22 modular domains.
 - Implemented **multi-tenant SaaS** architecture, ZKTeco biometric pipeline, and configurable payroll/attendance rule engine.
 - Delivered bilingual RTL admin SPA with analytics, payroll runs, RBAC, and external integration APIs.
 

@@ -1,10 +1,10 @@
 const FEATURED_PROJECT_IDS = [
   '12-cinema-pos',
   '11-rns-hr',
+  '03-erp-arabia',
   '04-boatbnb-erp-monorepo',
   '10-harvest-british-college',
   '01-blackhorse',
-  '13-cinema-booking',
 ];
 
 const PROJECTS = [
@@ -16,6 +16,7 @@ const PROJECTS = [
     impact: 'Multi-client platform · Offline POS sync · 1,300+ pages architecture docs · Partner OpenAPI',
     stack: ['Laravel', 'React 19', 'Flutter', 'PostgreSQL', 'Docker', 'OpenAPI'],
     meta: {
+      client: 'Al Arabia Cinema',
       industry: 'Cinema / Retail POS',
       role: 'Full-Stack Engineer & Project Manager',
       duration: 'Sep 2025 – Present',
@@ -28,24 +29,6 @@ const PROJECTS = [
     repo: 'https://github.com/Abdelrahman1203',
   },
   {
-    id: '13-cinema-booking',
-    name: 'Cinema Booking',
-    tag: 'Ticketing',
-    summary: 'Cinema booking platform with Angular 19 frontend and Spring Boot / Symfony API backends — live at booking-app.rnscinemas.com.',
-    impact: 'Dual backend parity · MongoDB + Redis · Production cPanel deploy',
-    stack: ['Angular 19', 'Spring Boot', 'Symfony 7', 'MongoDB', 'Redis'],
-    meta: {
-      industry: 'Cinema / Ticketing',
-      role: 'Full-Stack Engineer',
-      duration: '2025 – Present',
-      live: 'booking-app.rnscinemas.com',
-    },
-    readme: '13-cinema-booking/CV_PROJECT.md',
-    caseStudy: '13-cinema-booking/CV_PROJECT.md',
-    arch: '13-cinema-booking/CV_PROJECT.md',
-    repo: 'https://github.com/Abdelrahman1203',
-  },
-  {
     id: '14-cineasset',
     name: 'CineAsset',
     tag: 'Desktop App',
@@ -53,6 +36,7 @@ const PROJECTS = [
     impact: 'Local-first Electron · RBAC · Audit log & CSV export',
     stack: ['Electron', 'React', 'MongoDB', 'JWT', 'Vitest'],
     meta: {
+      client: 'Al Arabia Cinema',
       industry: 'Cinema Operations',
       role: 'Full-Stack Engineer',
       duration: '2025',
@@ -70,6 +54,12 @@ const PROJECTS = [
     summary: 'Wholesale delivery platform for supermarkets, suppliers, and drivers with real-time orders and group purchasing.',
     impact: '240+ API endpoints · 5 user roles · Real-time Socket.IO order tracking',
     stack: ['Node.js', 'MongoDB', 'Socket.IO', 'Flutter'],
+    meta: {
+      client: 'Triple Agency',
+      industry: 'B2B Logistics',
+      role: 'Full-Stack Engineer',
+      duration: '2025',
+    },
     thumb: '01-blackhorse/screenshots/pages/01-admin-login.png',
     readme: 'github-readmes/blackhorse/README.md',
     caseStudy: 'case-studies/blackhorse.md',
@@ -83,6 +73,12 @@ const PROJECTS = [
     tag: 'Contest Platform',
     summary: 'Bilingual broker talent competition with video uploads, voting, and Fawaterak payment integration.',
     stack: ['Laravel 10', 'MySQL', 'Tailwind', 'Fawaterak'],
+    meta: {
+      client: 'Triple Agency',
+      industry: 'Real Estate',
+      role: 'Full-Stack Engineer',
+      duration: '2025',
+    },
     thumb: '02-real-estate-all-stars/screenshots/pages/01-home-register.png',
     readme: 'github-readmes/real-estate-all-stars/README.md',
     caseStudy: 'case-studies/real-estate-all-stars.md',
@@ -97,6 +93,12 @@ const PROJECTS = [
     summary: 'Multi-branch warehouse ERP with purchases, transfers, stock adjustments, and Arabic RTL reports.',
     impact: '10+ exportable reports · Multi-branch inventory · Bilingual EN/AR',
     stack: ['Laravel', 'Vue 3', 'MongoDB', 'Redis'],
+    meta: {
+      client: 'Al Arabia Cinema',
+      industry: 'Warehouse / Inventory ERP',
+      role: 'Full-Stack Engineer & PM',
+      duration: 'Sep 2025 – Present',
+    },
     thumb: '03-erp-arabia/screenshots/pages/02-dashboard.png',
     readme: 'github-readmes/erp-arabia/README.md',
     caseStudy: 'case-studies/erp-arabia.md',
@@ -112,6 +114,7 @@ const PROJECTS = [
     impact: '5 apps · 10 languages · Stripe + Agora + GPS · Sole developer end-to-end',
     stack: ['Laravel 12', 'Vue 3', 'Stripe', 'Agora', 'MongoDB', 'AWS S3'],
     meta: {
+      client: 'Freelance',
       industry: 'Travel & Marine Services',
       role: 'Sole Full-Stack Engineer & Solutions Architect',
       duration: 'Jul 2025 – Jan 2026',
@@ -125,7 +128,6 @@ const PROJECTS = [
         'Commission and payout management', 'Notifications', 'Admin ERP dashboard', 'Analytics and reporting',
       ],
     },
-    thumb: '04-boatbnb-erp-monorepo/screenshots/mobile/11-mobile-home-search.png',
     readme: 'github-readmes/boatbnb-erp/README.md',
     caseStudy: 'case-studies/boatbnb-erp.md',
     arch: 'docs/architecture/boatbnb-erp.md',
@@ -152,6 +154,12 @@ const PROJECTS = [
     summary: 'Healthcare admin panel with doctor/clinic management, AI chatbot, and mobile JWT APIs.',
     impact: '118+ migrations · OpenAI doctor matching · Firebase push notifications',
     stack: ['Laravel 10', 'JWT', 'OpenAI', 'Firebase'],
+    meta: {
+      client: 'Triple Agency',
+      industry: 'Healthcare',
+      role: 'Full-Stack Engineer',
+      duration: '2025',
+    },
     thumb: '06-estshary-admin/screenshots/pages/01-login.png',
     readme: 'github-readmes/estshary-admin/README.md',
     caseStudy: 'case-studies/estshary-admin.md',
@@ -165,6 +173,12 @@ const PROJECTS = [
     tag: 'Healthcare',
     summary: 'Public patient portal for doctor search, appointment booking, and medical services.',
     stack: ['Laravel 10', 'Blade', 'MySQL', 'AJAX'],
+    meta: {
+      client: 'Triple Agency',
+      industry: 'Healthcare',
+      role: 'Full-Stack Engineer',
+      duration: '2025',
+    },
     readme: 'github-readmes/estshary-patient/README.md',
     caseStudy: 'case-studies/estshary-patient.md',
     arch: 'docs/architecture/estshary-admin.md',
@@ -190,6 +204,12 @@ const PROJECTS = [
     tag: 'Real Estate',
     summary: 'Real estate referral platform with admin pipeline, commission wallets, and mobile property API.',
     stack: ['Laravel 10', 'MySQL', 'Sanctum', 'FCM'],
+    meta: {
+      client: 'Triple Agency',
+      industry: 'Real Estate',
+      role: 'Full-Stack Engineer',
+      duration: '2025',
+    },
     thumb: '09-trc-referrals/screenshots/pages/02-after-login.png',
     readme: 'github-readmes/trc-referrals/README.md',
     caseStudy: 'case-studies/trc-referrals.md',
@@ -205,6 +225,7 @@ const PROJECTS = [
     impact: '3 portals · 20+ reports · Live production · Spreadsheets → CRM',
     stack: ['Laravel 10', 'Livewire', 'Modules', 'Twilio'],
     meta: {
+      client: 'Harvest British College',
       industry: 'Education',
       role: 'Software Developer',
       duration: 'Jul 2024 – Jun 2025',
@@ -232,9 +253,10 @@ const PROJECTS = [
     api: 'docs/api/rns-hr.md',
     repo: 'https://github.com/Abdelrahman1203/rns-hr',
     meta: {
+      client: 'Al Arabia Cinema',
       industry: 'HR / Cinema Operations',
-      role: 'Full-Stack Engineer',
-      duration: '2024 – Present',
+      role: 'Full-Stack Engineer & PM',
+      duration: 'Sep 2025 – Present',
       live: 'hr-app.rnscinemas.com',
       platforms: 'Web Admin, ZKTeco Bridge, Integration API',
     },
@@ -245,6 +267,7 @@ function renderProjectMeta(p) {
   if (!p.meta) return '';
   const m = p.meta;
   const rows = [];
+  if (m.client) rows.push(`<span><strong>Client:</strong> ${m.client}</span>`);
   if (m.industry) rows.push(`<span><strong>Industry:</strong> ${m.industry}</span>`);
   if (m.role) rows.push(`<span><strong>Role:</strong> ${m.role}</span>`);
   if (m.duration) rows.push(`<span><strong>Duration:</strong> ${m.duration}</span>`);

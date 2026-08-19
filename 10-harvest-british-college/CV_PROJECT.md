@@ -1,7 +1,9 @@
-# Harvest British College (SYS) — Education ERP & CRM
+# Harvest British College — 3 CRM Portals
+
+**Client:** Harvest British College
 
 ## One-line summary
-Modular Laravel platform for Harvest British College: CRM lead pipeline, class/group management, payments, multi-portal access (admin, instructor, student), and bilingual public website — live at harvestcollege.co.uk.
+Modular Laravel platform for Harvest British College: three CRM/management systems (admin ERP, customer portal, instructor portal), CRM lead pipeline, class/group management, payments, and bilingual public website — live at harvestcollege.co.uk.
 
 ## Tech stack
 - **Backend:** Laravel 10, PHP 8.1+, MySQL, nwidart/laravel-modules

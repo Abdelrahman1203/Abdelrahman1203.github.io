@@ -1,5 +1,7 @@
 # BlackHorse — B2B Wholesale & Delivery Platform
 
+**Client:** Triple Agency
+
 ## One-line summary
 Multi-sided B2B wholesale and delivery platform for supermarkets, suppliers, and delivery drivers with real-time orders, group purchasing, and admin ERP.
 

@@ -1,5 +1,7 @@
 # TRC — Real Estate Referral Platform
 
+**Client:** Triple Agency
+
 ## One-line summary
 Real estate referral and membership platform with admin web panel and mobile REST API for property developers, referrals, wallets, and commissions.
 

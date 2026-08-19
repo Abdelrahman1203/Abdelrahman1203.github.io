@@ -1,5 +1,7 @@
 # ERP Arabia — Warehouse & Inventory ERP
 
+**Client:** Al Arabia Cinema
+
 ## One-line summary
 Vue.js 3 refactored ERP for multi-branch warehouse operations: purchases, transfers, stock adjustments, and rich reporting with Arabic RTL support.
 

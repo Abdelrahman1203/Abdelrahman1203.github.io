@@ -1,11 +1,14 @@
 # BoatBnB + ERP — Multi-Platform Boat Rental Marketplace & Operations System
 
+**Client:** Freelance
+
 ## One-line summary
 Multi-platform boat rental ecosystem with customer, provider, agency, guest, and admin applications featuring real-time chat, GPS tracking, multilingual support, Stripe payments, and an integrated ERP system.
 
 ## Role & context
 | Field | Value |
 |-------|-------|
+| **Client** | Freelance |
 | **Industry** | Travel & Marine Services |
 | **Role** | Sole Full-Stack Engineer & Solutions Architect |
 | **Duration** | Jul 2025 – Jan 2026 |
@@ -41,9 +44,6 @@ Laravel 12, PHP 8.2, Vue.js 3, MySQL, MongoDB, Redis, Sanctum, Socialite, Stripe
 - Delivered **10-language** localization across mobile and admin; integrated AWS S3, OAuth, WhatsApp OTP, and Redis.
 
 ## Links
-- **Portfolio gallery:** https://abdelrahman1203.github.io/project.html?id=04-boatbnb-erp-monorepo
+- **Portfolio:** https://abdelrahman1203.github.io/project.html?id=04-boatbnb-erp-monorepo
 - **GitHub (project docs):** https://github.com/Abdelrahman1203/boatbnb-erp-monorepo
 - **GitHub (full portfolio):** https://github.com/Abdelrahman1203/Abdelrahman1203.github.io
-
-## Screenshots
-See `screenshots/` — 41 captures: mobile app + Vue 3 admin dashboard.

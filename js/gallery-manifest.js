@@ -33,24 +33,7 @@ const GALLERY_MANIFEST = {
     "03-erp-arabia/screenshots/pages/15-closed-documents.png",
     "03-erp-arabia/screenshots/pages/16-public-summary.png"
   ],
-  "04-boatbnb-erp-monorepo": [
-    "04-boatbnb-erp-monorepo/screenshots/mobile/10-mobile-splash.png",
-    "04-boatbnb-erp-monorepo/screenshots/mobile/11-mobile-home-search.png",
-    "04-boatbnb-erp-monorepo/screenshots/mobile/12-mobile-yacht-boat.png",
-    "04-boatbnb-erp-monorepo/screenshots/mobile/13-mobile-jet-ski.png",
-    "04-boatbnb-erp-monorepo/screenshots/mobile/14-mobile-services.png",
-    "04-boatbnb-erp-monorepo/screenshots/mobile/15-mobile-rental-type.png",
-    "04-boatbnb-erp-monorepo/screenshots/mobile/16-mobile-boat-detail.png",
-    "04-boatbnb-erp-monorepo/screenshots/mobile/17-mobile-user-profile.png",
-    "04-boatbnb-erp-monorepo/screenshots/mobile/18-mobile-bookings.png",
-    "04-boatbnb-erp-monorepo/screenshots/pages/01-welcome-page.png",
-    "04-boatbnb-erp-monorepo/screenshots/pages/20-admin-login.png",
-    "04-boatbnb-erp-monorepo/screenshots/pages/21-admin-dashboard.png",
-    "04-boatbnb-erp-monorepo/screenshots/pages/22-admin-boats.png",
-    "04-boatbnb-erp-monorepo/screenshots/pages/23-admin-bookings.png",
-    "04-boatbnb-erp-monorepo/screenshots/pages/24-admin-users.png",
-    "04-boatbnb-erp-monorepo/screenshots/pages/25-admin-analytics.png"
-  ],
+  "04-boatbnb-erp-monorepo": [],
   "05-easternco-law-erp": [
     "05-easternco-law-erp/screenshots/pages/01-admin-login.png"
   ],
@@ -121,14 +104,13 @@ const GALLERY_MANIFEST = {
     "11-rns-hr/screenshots/pages/21-data-import.png"
   ],
   "12-cinema-pos": [],
-  "13-cinema-booking": [],
   "14-cineasset": []
 };
 const GALLERY_COUNTS = {
   "01-blackhorse": 2,
   "02-real-estate-all-stars": 9,
   "03-erp-arabia": 16,
-  "04-boatbnb-erp-monorepo": 16,
+  "04-boatbnb-erp-monorepo": 0,
   "05-easternco-law-erp": 1,
   "06-estshary-admin": 2,
   "07-estshary-patient-site": 0,
@@ -137,6 +119,5 @@ const GALLERY_COUNTS = {
   "10-harvest-british-college": 14,
   "11-rns-hr": 21,
   "12-cinema-pos": 0,
-  "13-cinema-booking": 0,
   "14-cineasset": 0
 };

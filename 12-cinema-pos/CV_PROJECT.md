@@ -1,4 +1,6 @@
-# Cinema Concession POS — Enterprise Platform (Al Arabia Cinema)
+# Cinema Concession POS — Enterprise Platform
+
+**Client:** Al Arabia Cinema
 
 ## One-line summary
 Enterprise cinema concession POS for Renaissance Cinemas — React Admin, Flutter POS, Flutter Branch Manager, Laravel API, PostgreSQL, offline-first branch sync, and partner integration APIs.

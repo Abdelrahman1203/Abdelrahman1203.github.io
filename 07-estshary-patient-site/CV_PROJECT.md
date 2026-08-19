@@ -1,5 +1,7 @@
 # Estshary — Patient Website
 
+**Client:** Triple Agency
+
 ## One-line summary
 Public-facing patient website for the Estshary healthcare ecosystem — search doctors, book appointments, browse services and medical operations.
 

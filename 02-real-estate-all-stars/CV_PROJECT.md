@@ -1,5 +1,7 @@
 # Real Estate All-Stars — Brokers Got Talent
 
+**Client:** Triple Agency
+
 ## One-line summary
 Bilingual (EN/AR) real estate talent competition platform where brokers register, upload videos, receive votes, and purchase vote packages via payment gateway.
 

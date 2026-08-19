@@ -37,7 +37,6 @@ start portfolio-cv/website/index.html
 | 10 | [10-harvest-british-college/](./10-harvest-british-college/) | Harvest British College (SYS) | Laravel, Livewire, Modules, Twilio |
 | 11 | [11-rns-hr/](./11-rns-hr/) | RNS HR (RNS Cinemas) | Laravel 12, React 19, MongoDB, ZKTeco |
 | 12 | [12-cinema-pos/](./12-cinema-pos/) | Cinema Concession POS (Al Arabia) | Laravel, React 19, Flutter, PostgreSQL |
-| 13 | [13-cinema-booking/](./13-cinema-booking/) | Cinema Booking (RNS) | Angular 19, Spring Boot, Symfony, MongoDB |
 | 14 | [14-cineasset/](./14-cineasset/) | CineAsset Desktop | Electron, React, MongoDB |
 
 ## Regenerate CV PDF

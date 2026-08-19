@@ -34,8 +34,6 @@ Laravel 12, PHP 8.2, Vue.js 3, MySQL, MongoDB, Redis, Sanctum, Socialite, Stripe
 - Admin ERP dashboard
 - Analytics and reporting
 
-![Mobile Home Search](../../04-boatbnb-erp-monorepo/screenshots/11-mobile-home-search.png)
-
 ## Links
 
 - **Live portfolio:** https://abdelrahman1203.github.io/project.html?id=04-boatbnb-erp-monorepo

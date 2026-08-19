@@ -1,5 +1,7 @@
 # Estshary — Healthcare Admin & API
 
+**Client:** Triple Agency
+
 ## One-line summary
 Full healthcare management admin panel and REST API for doctor/clinic booking platform with AI chatbot, Firebase notifications, and mobile APIs.
 
