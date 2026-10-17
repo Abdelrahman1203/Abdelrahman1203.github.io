@@ -38,7 +38,7 @@ function projectCardHtml(p, compact = false) {
         ${p.impact ? `<p class="project-impact">${p.impact}</p>` : ''}
         <p>${p.summary}</p>
         ${renderProjectMeta(p)}
-        <div class="project-stack">${p.stack.map((s) => `<span>${s}</span>`).join('')}</div>
+        <div class="project-stack">${(p.stack || []).map((s) => `<span>${s}</span>`).join('')}</div>
         <div class="project-links">
           <a href="project.html?id=${p.id}">${screenshotLabel}</a>
           ${docLinks}

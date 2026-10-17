@@ -1,65 +1,78 @@
-# Case Study: BoatBnB + ERP — Multi-Platform Boat Rental Marketplace
+# Case Study: BoatBnB — Large Multi-Role Boat Rental Marketplace
 
 ## Client Context
 
-A marine-tech startup needed a **complete boat rental ecosystem** — marketplace plus back-office ERP — covering guests, boat owners, marina agencies, on-water service providers, and internal admin operations across **10 languages**.
+A marine-tech product needed a **full marketplace backend and operations platform** for boat rentals — not a small CRUD app. Guests, boat hosts, marina agencies, and service providers all needed role-specific workflows, while admins needed a real operations SPA for users, boats, bookings, promos, and analytics.
 
 ## Problem
 
-- No unified platform for customers, providers, agencies, and administrators
-- Manual payment reconciliation and off-platform coordination between booking parties
-- No GPS-aware discovery for boats at different marinas
-- Product required multilingual launch for Gulf and international markets
-- Back-office ERP needed alongside customer-facing apps in one maintainable codebase
+- No unified API surface for guest booking, host operations, agency fleet workflows, and service providers
+- Manual booking coordination, payout tracking, and support handling
+- Need for GPS-aware discovery, promotions/loyalty, insurance, and media uploads
+- Admin needed a usable SPA, not only raw APIs
+- Production concerns: auth, OTP, rate limiting, deploy hardening, Dockerized environments
 
 ## Solution
 
-**Sole developer responsible for business analysis, architecture, frontend, backend, infrastructure, testing, deployment, and maintenance.**
+**Sole developer responsible for requirements, architecture, database design, backend, Vue admin, integrations, security, testing, deployment, and maintenance.**
 
-Designed and delivered **BoatBnB + ERP** — a Laravel 12 monorepo with five role-based applications:
+Delivered **BoatBnB** as a large Laravel 12 platform:
 
-| Role | Capabilities |
-|------|--------------|
-| Customer / guest | Search, book, pay (Stripe), chat (Agora), reviews, referrals |
-| Service provider | Publish add-on services (captain, catering, events) |
-| Host | List boats, manage availability, accept bookings |
-| Agency | Fleet management, inter-agency boat transfers |
-| Admin | Moderation, ERP dashboard, analytics, insurance, payouts |
+| Role / surface | Capabilities |
+|----------------|--------------|
+| Guest / customer API | Search/GPS discovery, book, pay, wishlist, reviews, chat, referrals, support |
+| Host API | List boats, manage bookings, payouts |
+| Agency API | Fleet workflows, boat transfer requests, payouts |
+| Service provider API | Publish add-on services |
+| Admin API + Vue 3 SPA | Users, boats, bookings, promo codes, analytics, moderation |
 
-### Key modules
+### Major modules delivered
 
-- **Boat discovery & GPS tracking** — nearby search, radius filters, marine weather
-- **Booking engine** — scheduling, rental types, promo codes, loyalty, insurance
-- **Stripe payments** — bookings, commissions, refunds, provider payouts
-- **Real-time chat with Agora** — messaging API + voice/video calls
-- **10-language localization** — full mobile and admin i18n workflows
-- **Integrated ERP** — admin operations, reporting, moderation in same monorepo
+- Auth (Sanctum, OTP, Firebase, Google/Apple Socialite hooks, Smsala WhatsApp/SMS OTP)
+- Boat discovery & GPS nearby search
+- Booking lifecycle + QR codes + refunds/invoices
+- Payments & host/agency payouts
+- REST chat with attachments
+- Referrals, loyalty tiers, promo codes
+- Wishlist, saved searches, reviews
+- Support tickets
+- Insurance policies
+- Content pages (terms/privacy/FAQ)
+- Weather integration (OpenWeatherMap)
+- AWS S3 file pipeline
+- Notifications
+- Security middleware + nginx/fail2ban deploy configs + Docker Sail
 
 ## Project Details
 
 | Field | Value |
 |-------|-------|
 | Industry | Travel & Marine Services |
-| Role | Sole Full-Stack Engineer & Solutions Architect |
+| Role | Sole Full-Stack Engineer |
 | Duration | Jul 2025 – Jan 2026 |
 | Team Size | 1 |
-| Platforms | Web Admin, Provider Portal, Customer App, Agency App |
-| Languages | 10 |
+| Surfaces | Role-based mobile APIs + Vue 3 Admin SPA + Admin REST |
+| Locales | EN/AR platform · EN/FR/AR admin |
 
 ## Business Impact
 
 | Metric | Result |
 |--------|--------|
-| Applications delivered | 5 role-based apps + admin ERP |
-| Languages | 10-language mobile + admin UI |
-| Payments | End-to-end Stripe — booking, commission, payout |
-| Communication | Agora realtime chat + REST messaging |
-| Discovery | GPS tracking replaces manual marina browsing |
 | Ownership | Full lifecycle as sole developer |
+| API breadth | 26 mobile API controllers across marketplace domains |
+| Roles | Guest, host, agency, service provider, admin |
+| Ops UI | Vue 3 admin for users/boats/bookings/promos/analytics |
+| Growth systems | Referrals + loyalty + promo codes |
+| Ops systems | Support tickets + insurance + content CMS |
+| Delivery | Dockerized environments + production security hardening |
+
+## End-to-end ownership
+
+Requirements → DB design → Layered Laravel API → Vue 3 admin → Mobile role APIs → Integrations → Security → Docker deployment → Support
 
 ## Technologies
 
-Laravel 12 · PHP 8.2 · Vue.js 3 · MySQL · MongoDB · Redis · Sanctum · Socialite · Stripe · AWS S3 · Agora SDK · Firebase · Docker · Nginx
+Laravel 12 · PHP 8.2 · Vue 3 · Vite · MySQL · Redis · Sanctum · Socialite · Stripe · AWS S3 · Firebase · Smsala · OpenWeatherMap · QR codes · Scribe · Docker · Nginx/fail2ban
 
 ## Links
 
